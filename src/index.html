@@ -8,9 +8,15 @@
     <link rel="stylesheet" href="./assets/css/styles.min.css">
 </head>
 <body>
-    <main><h1>Denis Novik</h1></main> 
-    <footer></footer>
-    
+    @include('./partials/header.html')
+    <main>
+        @include('./partials/home.html') 
+        @include('./partials/about.html') 
+        @include('./partials/skills.html') 
+    </main> 
+    <footer>
+
+    </footer>    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

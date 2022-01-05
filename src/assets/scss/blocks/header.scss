@@ -1,0 +1,20 @@
+.nav {
+    border-bottom: thin solid $black;
+}
+
+.nav__menu {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    height: $header-height;
+}
+
+.nav__menu-link {
+    color: $gray-dark;
+    font: $font-size $font-family-bold;
+    text-decoration: none;
+
+    &.active {
+        color: $black;
+    }
+}

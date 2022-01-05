@@ -1,0 +1,47 @@
+.skills {
+    padding-bottom: 11rem;
+    padding-top: 9rem;
+    text-align: center;
+}
+
+.skills__description-text {
+    margin-bottom: 8.4rem;
+    margin-top: 6.8rem;
+    font: $font-size $font-family;
+}
+
+.skills__tools {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint($bp-lg){
+        justify-content: center;
+    }
+}
+
+.skills__tool {
+    flex-basis: 18rem;
+    min-width: 18rem;
+
+    > svg {
+        @include size(8.8rem);
+    }    
+}
+
+.skills__tool-name {
+    margin-bottom: 4rem;
+    margin-top: 2.4rem;
+    color: $gray-dark;
+    font: $font-size-xs $font-family-bold;
+}
+
+.skills__tool-raiting {
+    svg {
+        @include size(2.6rem);
+
+        + svg {
+            margin-left: 1rem;
+        }
+    }
+}
