@@ -1,0 +1,46 @@
+.home {
+    padding-bottom: 10rem;
+    padding-top: 3.2rem;
+}
+
+.home__general-info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 4.4rem;
+}
+
+.home__name {
+    margin-bottom: -.4rem;
+    width: 15rem;
+    line-height: 1;
+}
+
+.home__designer-info {
+    @include centerX();
+    font: $font-size $font-family;
+}
+
+.home__language {
+    margin-bottom: .4rem;
+    font-size: 0;
+    transform: rotate(180deg);
+    writing-mode: tb-rl;    
+}
+
+.home__language-link {
+    color: $gray-dark;
+    font: $font-size-sm $font-family;
+    text-decoration: none;
+
+    + .home__language-link {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: .1rem solid $black;        
+    }
+
+    &.active {
+        color: $black;
+        font-family: $font-family-bold;
+    }
+}

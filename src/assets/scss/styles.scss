@@ -7,25 +7,39 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    background-color: $white;
+}
+
 * {
     box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    text-transform: uppercase;
+.container {
+    margin: 0 auto;
+    max-width: 940px;
+
+    @include breakpoint($bp-lg){
+        padding: 0 3rem;
+    }
 }
 
 h1 {
-    font-family: $font-family;
-    font-size: 10rem;       
+    font: $font-size-xl $font-family-bold;      
+}
+
+h2 {
+    font: $font-size-lg $font-family-bold;      
 }
 
 .show {
     display: block
 }
+
 .hide { 
     display: none
 }
+
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -38,3 +52,8 @@ h1 {
         opacity: 1;
     }
 }
+
+@import './blocks/header.scss';
+@import './blocks/home.scss';
+@import './blocks/about.scss';
+@import './blocks/skills.scss';
