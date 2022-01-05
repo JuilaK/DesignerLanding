@@ -1,0 +1,61 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+//Position
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...);
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...);
+}
+
+@mixin sticky($args...) {
+  @include position(sticky, $args...);
+}
+
+@mixin center {
+  transform: translate(-50%, -50%);
+  @include absolute($top: 50%, $left: 50%);
+}
+
+@mixin centerY {
+  transform: translateY(-50%);
+  @include absolute($top: 50%);
+}
+
+@mixin centerX {
+  transform: translateX(-50%);
+  @include absolute($left: 50%);
+}
+
+//Media query
+
+@mixin media-mobile-landscape {
+    @media screen and (max-width: $br-lg) and (orientation: landscape) {
+      @content;
+    }
+}
+
+@mixin breakpoint($bp) {
+    
+    @media screen and (max-width: $bp) {
+        @content;
+    }
+    
+}
