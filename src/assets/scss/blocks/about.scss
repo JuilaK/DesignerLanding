@@ -16,8 +16,7 @@
 }
 
 .about__text {
-    font: $font-size $font-family;
-
+    font-size: $font-size;
     + .about__text {
         margin-top: 3.2rem;
     }

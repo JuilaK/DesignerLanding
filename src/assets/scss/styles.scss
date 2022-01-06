@@ -4,6 +4,8 @@
 @import './vendor/reset.scss';
 
 html {
+    color: $black;
+    font-family: $font-family;
     font-size: 62.5%;
 }
 
@@ -57,3 +59,5 @@ h2 {
 @import './blocks/home.scss';
 @import './blocks/about.scss';
 @import './blocks/skills.scss';
+@import './blocks/portfolio.scss';
+@import './blocks/contacts.scss';

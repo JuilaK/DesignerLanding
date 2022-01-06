@@ -1,19 +1,32 @@
+$padding: 2rem;
+
 .skills {
-    padding-bottom: 11rem;
+    padding-bottom: 3rem;
     padding-top: 9rem;
     text-align: center;
+
+    @include breakpoint($bp-md){
+        padding-bottom: 1.8rem;
+        padding-top: 8.2rem;
+    }
 }
 
 .skills__description-text {
     margin-bottom: 8.4rem;
     margin-top: 6.8rem;
-    font: $font-size $font-family;
+    font-size: $font-size;
+
+    @include breakpoint($bp-md){
+        margin-bottom: 7.2rem;
+        margin-top: 4.8rem;
+    }
 }
 
 .skills__tools {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-left: -$padding;
 
     @include breakpoint($bp-lg){
         justify-content: center;
@@ -21,17 +34,21 @@
 }
 
 .skills__tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     flex-basis: 18rem;
+    margin: 0 $padding 8rem;
     min-width: 18rem;
 
-    > svg {
+    svg {
         @include size(8.8rem);
     }    
 }
 
 .skills__tool-name {
-    margin-bottom: 4rem;
-    margin-top: 2.4rem;
+    margin: 2.4rem auto 4rem;
+    width: 10rem;
     color: $gray-dark;
     font: $font-size-xs $font-family-bold;
 }

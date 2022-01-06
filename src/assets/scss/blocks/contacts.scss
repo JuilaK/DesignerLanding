@@ -1,0 +1,55 @@
+.contacts {
+    padding-bottom: 12rem;
+    padding-top: 11rem;
+    text-align: center;
+
+    @include breakpoint($bp-md){
+        padding-top: 8.2rem;
+        padding-bottom: 10rem;
+    }
+}
+
+.contacts__text {
+    margin-top: 2.4rem;
+    font-size: $font-size;
+}
+
+.contacts__button {
+    margin-top: 3rem;
+    padding: 1rem 3rem;
+    border-radius: 2.4rem;
+    border: none;
+    background-color: $black;
+    color: $white;
+    font: $font-size $font-family-bold;
+}
+
+.contacts__social-wrapper {
+    margin-top: 8.4rem;
+
+    @include breakpoint($bp-md){
+        margin-top: 4.8rem;
+    }
+}
+
+.contacts__social-icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 34.2rem;
+}
+
+.contacts__social-link {
+    display: block;
+
+    > svg {
+        @include size(4rem); 
+    }
+}
+
+.contacts__request-text {
+    margin-top: 4.4rem;
+    color: $gray-dark;
+    font-size: $font-size-xs;
+    line-height: 1.3;
+}

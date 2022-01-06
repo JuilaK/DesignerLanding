@@ -1,0 +1,26 @@
+.portfolio {
+    padding-bottom: 9.6rem;
+    padding-top: 11rem;
+    background-color: $gray-light;
+    text-align: center;
+
+    @include breakpoint($bp-md){
+        padding-bottom: 8rem;
+        padding-top: 8rem;
+    }
+}
+
+.portfolio__item {
+    display: block;
+    margin-top: 6.8rem;
+}
+
+.portfolio__item-text {
+    margin-top: 4.4rem;
+    color: $black;
+    font-size: $font-size;
+
+    @include breakpoint($bp-md){
+        margin-top: 3.2rem;
+    }
+}
