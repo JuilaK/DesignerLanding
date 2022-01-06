@@ -18,7 +18,7 @@
 
 .home__designer-info {
     @include centerX();
-    font: $font-size $font-family;
+    font-size: $font-size;
 }
 
 .home__language {
@@ -30,7 +30,7 @@
 
 .home__language-link {
     color: $gray-dark;
-    font: $font-size-sm $font-family;
+    font-size: $font-size-sm;
     text-decoration: none;
 
     + .home__language-link {
