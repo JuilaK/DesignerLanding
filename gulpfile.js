@@ -1,6 +1,7 @@
 'use strict';
 
 const {src, dest, watch, parallel, series} = require('gulp');
+const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require('browser-sync').create();
 const del = require("del");
@@ -12,7 +13,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssnano = require("gulp-cssnano");
 const uglify = require('gulp-uglify-es').default;
 const svgSprite = require('gulp-svg-sprite');
-const imagemin = require("gulp-imagemin");
 
 /* Paths */
 const srcPath = 'src/';
@@ -103,21 +103,30 @@ function js() {
         .pipe(webpackStream({
             mode: "production",
             output: {
-            filename: 'script.js',
+                filename: 'script.js',
+                environment: {
+                    arrowFunction: false,
+                    bigIntLiteral: false,
+                    const: false,
+                    destructuring: false,
+                    dynamicImport: false,
+                    forOf: false,
+                    module: false,
+                  }
             },
             module: {
-            rules: [
-                {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env']
+                rules: [
+                    {
+                        test: /\.(js)$/,
+                        exclude: /(node_modules)/,
+                        use: {
+                            loader: 'babel-loader',
+                            options: {
+                                presets: ['@babel/preset-env']
+                            }
+                        }
                     }
-                }
-                }
-            ]
+                ]
             }
         }))
         .on('error', function (err) {
