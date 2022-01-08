@@ -3,6 +3,9 @@ const $ = require('jquery');
 require('svgxuse');
 
 $(() => {
+    const documentHeight = $(document).height();
+    const windowHeight = $(window).height();
+
     const nav = $('.nav');
     const menuBtn = $('.nav__burger');
     const menu = $('.nav__menu');
@@ -44,7 +47,8 @@ $(() => {
             const top  = $(element).offset().top-100;
             const bottom = top + $(element).height();            
             const id = $(element).attr('id');
-            if (scroll > top && scroll < bottom){                
+
+            if ((scroll > top && scroll < bottom) || (scroll >= documentHeight - windowHeight - 100)){                
                 const parent = menuLinks.filter(`[href="#${id}"]`);
                 menuLinks.filter('.active').removeClass('active');
                 parent.addClass('active');

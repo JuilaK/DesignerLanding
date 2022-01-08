@@ -59,7 +59,9 @@
         padding-top: 0.5rem;
         border-top: .1rem solid $black;        
     }
-
+    
+    &:hover,
+    &:focus,
     &.active {
         color: $black;
         font-family: $font-family-bold;
