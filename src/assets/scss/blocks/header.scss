@@ -55,6 +55,8 @@ $padding-y-mobile: 6.4rem;
         font-size: $font-size-lg;
     }
 
+    &:hover,
+    &:focus,
     &.active {
         color: $black;
     }
@@ -151,6 +153,8 @@ $padding-y-mobile: 6.4rem;
         border-top: .4rem solid $black;        
     }
 
+    &:hover,
+    &:focus,
     &.active {
         color: $black; 
     }
