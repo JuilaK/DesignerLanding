@@ -1,7 +1,8 @@
 'use strict';
 const $ = require('jquery');
+require('svgxuse');
 
-$(document).ready(() => {
+$(() => {
     const nav = $('.nav');
     const menuBtn = $('.nav__burger');
     const menu = $('.nav__menu');
@@ -31,7 +32,7 @@ $(document).ready(() => {
         $(e.target).addClass('active');
     }
 
-    menuLinks.on('click', (e) => {
+    menuLinks.on('click', e =>  {
         moveToBlock(e);        
         closeMenu();
     });
